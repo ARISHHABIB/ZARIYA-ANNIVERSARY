@@ -1,0 +1,542 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Happy 2 Months, Zariya! 🌈❤️</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Poppins:wght@300;400;600;700&display=swap');
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      min-height: 100vh;
+      font-family: 'Poppins', sans-serif;
+      color: #fff;
+      background: linear-gradient(-45deg, #ff0844, #ffb199, #ff758c, #8e2de2, #4a00e0, #ff4b1f);
+      background-size: 400% 400%;
+      animation: gradientBG 12s ease infinite;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-between;
+      padding: 20px;
+      overflow-x: hidden;
+    }
+
+    @keyframes gradientBG {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    /* Floating Colorful Hearts & Sparkles */
+    .bg-particles {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    .particle {
+      position: absolute;
+      bottom: -40px;
+      animation: floatUp linear infinite;
+      user-select: none;
+    }
+
+    @keyframes floatUp {
+      0% { transform: translateY(0) rotate(0deg) scale(0.8); opacity: 0; }
+      20% { opacity: 0.9; }
+      80% { opacity: 0.9; }
+      100% { transform: translateY(-110vh) rotate(360deg) scale(1.2); opacity: 0; }
+    }
+
+    /* Navigation Bar */
+    .navbar {
+      position: relative;
+      z-index: 10;
+      display: flex;
+      gap: 6px;
+      background: rgba(255, 255, 255, 0.22);
+      backdrop-filter: blur(15px);
+      padding: 8px 12px;
+      border-radius: 50px;
+      border: 1px solid rgba(255, 255, 255, 0.4);
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+      flex-wrap: wrap;
+      justify-content: center;
+      margin-bottom: 18px;
+    }
+
+    .nav-btn {
+      background: transparent;
+      border: none;
+      color: #fff;
+      padding: 7px 12px;
+      border-radius: 30px;
+      font-family: 'Poppins', sans-serif;
+      font-weight: 600;
+      font-size: 0.8rem;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    .nav-btn.active, .nav-btn:hover {
+      background: #fff;
+      color: #ff0844;
+      box-shadow: 0 4px 15px rgba(255, 255, 255, 0.4);
+      transform: translateY(-2px);
+    }
+
+    /* Main Card Container */
+    .card-container {
+      position: relative;
+      z-index: 5;
+      max-width: 650px;
+      width: 100%;
+      background: rgba(20, 10, 35, 0.65);
+      backdrop-filter: blur(18px);
+      -webkit-backdrop-filter: blur(18px);
+      border: 2px solid rgba(255, 255, 255, 0.35);
+      border-radius: 28px;
+      padding: 32px 26px;
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.45);
+      min-height: 440px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .page {
+      display: none;
+      animation: fadeIn 0.5s ease forwards;
+      text-align: center;
+    }
+
+    .page.active {
+      display: block;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(15px) scale(0.98); }
+      to { opacity: 1; transform: translateY(0) scale(1); }
+    }
+
+    h1 {
+      font-family: 'Dancing Script', cursive;
+      font-size: 3rem;
+      background: linear-gradient(to right, #ffe259, #ffa751, #ff758c);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      margin-bottom: 10px;
+      line-height: 1.2;
+    }
+
+    h2 {
+      font-family: 'Dancing Script', cursive;
+      font-size: 2.4rem;
+      color: #ffe259;
+      margin-bottom: 15px;
+    }
+
+    .badge {
+      display: inline-block;
+      background: linear-gradient(90deg, #ff512f, #dd2476);
+      padding: 6px 18px;
+      border-radius: 50px;
+      font-size: 0.8rem;
+      font-weight: 700;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      margin-bottom: 15px;
+      box-shadow: 0 4px 15px rgba(221, 36, 118, 0.5);
+    }
+
+    /* Stats Grid */
+    .stats-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 12px;
+      margin: 22px 0;
+    }
+
+    .stat-box {
+      padding: 15px 10px;
+      border-radius: 18px;
+      font-weight: 600;
+      box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+    }
+
+    .stat-1 { background: linear-gradient(135deg, #ff416c, #ff4b2b); }
+    .stat-2 { background: linear-gradient(135deg, #8e2de2, #4a00e0); }
+    .stat-3 { background: linear-gradient(135deg, #f7971e, #ffd200); color: #222; }
+
+    .stat-box span {
+      display: block;
+      font-size: 1.5rem;
+      font-weight: 700;
+    }
+
+    .stat-box small {
+      font-size: 0.72rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    /* Memories Timeline */
+    .memory-list {
+      text-align: left;
+      max-height: 310px;
+      overflow-y: auto;
+      padding-right: 8px;
+    }
+
+    .memory-card {
+      background: linear-gradient(135deg, rgba(255,255,255,0.16), rgba(255,255,255,0.06));
+      border-left: 5px solid #ffd200;
+      padding: 14px 18px;
+      border-radius: 14px;
+      margin-bottom: 14px;
+      transition: transform 0.2s;
+    }
+
+    .memory-card:nth-child(2) { border-left-color: #ff416c; }
+    .memory-card:nth-child(3) { border-left-color: #00f2fe; }
+    .memory-card:nth-child(4) { border-left-color: #a8ff78; }
+    .memory-card:nth-child(5) { border-left-color: #ff9a9e; }
+
+    .memory-card:hover {
+      transform: translateX(5px);
+    }
+
+    .memory-date {
+      font-size: 0.8rem;
+      font-weight: 700;
+      color: #ffd200;
+      text-transform: uppercase;
+      margin-bottom: 4px;
+    }
+
+    .memory-text {
+      font-size: 0.92rem;
+      line-height: 1.55;
+      color: #fff;
+    }
+
+    /* Love Letter */
+    .letter-paper {
+      background: rgba(255, 255, 255, 0.12);
+      border: 1px solid rgba(255, 255, 255, 0.25);
+      padding: 20px;
+      border-radius: 18px;
+      text-align: left;
+      line-height: 1.7;
+      font-size: 0.92rem;
+      max-height: 310px;
+      overflow-y: auto;
+    }
+
+    .letter-sign {
+      font-family: 'Dancing Script', cursive;
+      font-size: 1.7rem;
+      color: #ffd200;
+      text-align: right;
+      margin-top: 12px;
+    }
+
+    /* Grand Finale Ending Page */
+    .finale-box {
+      background: linear-gradient(135deg, #ff0844, #ffb199);
+      padding: 30px 20px;
+      border-radius: 22px;
+      margin: 15px 0;
+      box-shadow: 0 12px 35px rgba(255, 8, 68, 0.45);
+      text-align: center;
+    }
+
+    .finale-box h3 {
+      font-family: 'Dancing Script', cursive;
+      font-size: 2.8rem;
+      color: #fff;
+      margin-bottom: 10px;
+      text-shadow: 0 2px 10px rgba(0,0,0,0.2);
+    }
+
+    .finale-box p {
+      font-size: 1rem;
+      line-height: 1.6;
+      color: #fff;
+      margin-bottom: 15px;
+    }
+
+    .heart-pulse {
+      font-size: 3rem;
+      animation: pulseAnim 1.2s infinite alternate;
+      display: inline-block;
+      margin-top: 5px;
+    }
+
+    @keyframes pulseAnim {
+      0% { transform: scale(1); }
+      100% { transform: scale(1.25); }
+    }
+
+    /* Action Buttons */
+    .action-btn {
+      background: linear-gradient(90deg, #ffe259, #ffa751);
+      color: #222;
+      border: none;
+      padding: 12px 26px;
+      border-radius: 50px;
+      font-family: 'Poppins', sans-serif;
+      font-weight: 700;
+      font-size: 0.92rem;
+      cursor: pointer;
+      margin-top: 15px;
+      box-shadow: 0 6px 20px rgba(255, 167, 81, 0.5);
+      transition: transform 0.2s;
+    }
+
+    .action-btn:hover {
+      transform: scale(1.05);
+    }
+
+    /* Bottom MP3 Music Player Bar */
+    .music-bar {
+      position: relative;
+      z-index: 10;
+      margin-top: 18px;
+      background: rgba(255, 255, 255, 0.24);
+      backdrop-filter: blur(15px);
+      border: 1px solid rgba(255, 255, 255, 0.45);
+      padding: 10px 22px;
+      border-radius: 50px;
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      box-shadow: 0 8px 25px rgba(0,0,0,0.25);
+    }
+
+    .play-btn {
+      background: #ff0844;
+      color: white;
+      border: none;
+      width: 38px;
+      height: 38px;
+      border-radius: 50%;
+      font-size: 1rem;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 4px 12px rgba(255, 8, 68, 0.5);
+    }
+
+    .song-info {
+      font-size: 0.85rem;
+      font-weight: 600;
+    }
+
+    ::-webkit-scrollbar { width: 6px; }
+    ::-webkit-scrollbar-thumb { background: rgba(255,255,255,0.4); border-radius: 10px; }
+
+    @media (max-width: 500px) {
+      h1 { font-size: 2.3rem; }
+      .stats-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Floating Colorful Particles -->
+  <div class="bg-particles" id="bgParticles"></div>
+
+  <!-- Multi-Page Navigation -->
+  <nav class="navbar">
+    <button class="nav-btn active" onclick="showPage('page1', this)">🏠 Home</button>
+    <button class="nav-btn" onclick="showPage('page2', this)">🏥 Our Story</button>
+    <button class="nav-btn" onclick="showPage('page3', this)">💌 Love Letter</button>
+    <button class="nav-btn" onclick="showPage('page4', this)">✨ Grand Finale</button>
+  </nav>
+
+  <!-- Main Content Card -->
+  <div class="card-container">
+
+    <!-- PAGE 1: WELCOME -->
+    <div class="page active" id="page1">
+      <div class="badge">✨ 2 Months Anniversary ✨</div>
+      <h1>Happy 2 Months,<br>Zariya Habib Sheikh! ❤️</h1>
+      <p style="color: #f8edeb; font-size: 0.95rem;">
+        From meeting in a hospital as your "Bhai" to becoming your "Hizda" and finally the luckiest guy in your life—what a crazy, beautiful journey!
+      </p>
+
+      <div class="stats-grid">
+        <div class="stat-box stat-1">
+          <span>2</span>
+          <small>Months Together</small>
+        </div>
+        <div class="stat-box stat-2">
+          <span>🏥 ➡️ ❤️</span>
+          <small>Hospital to Love</small>
+        </div>
+        <div class="stat-box stat-3">
+          <span>100%</span>
+          <small>Yours Forever</small>
+        </div>
+      </div>
+
+      <button class="action-btn" onclick="nextPage('page2', 1)">See Our Journey ➡️</button>
+    </div>
+
+    <!-- PAGE 2: OUR STORY & MEMORIES TIMELINE -->
+    <div class="page" id="page2">
+      <h2>How It All Started 🌈</h2>
+      <div class="memory-list">
+        
+        <div class="memory-card">
+          <div class="memory-date">🏥 Chapter 1 — Where We Met (The Hospital)</div>
+          <div class="memory-text">
+            Who knew a random meeting in a hospital would turn into the best part of my life? Seeing you there was where our whole story quietly began.
+          </div>
+        </div>
+
+        <div class="memory-card">
+          <div class="memory-date">🤝 Chapter 2 — The "Bhai" Phase 😅</div>
+          <div class="memory-text">
+            At first, I was just your "Bhai"! Little did you know what fate had planned for us behind that tag.
+          </div>
+        </div>
+
+        <div class="memory-card">
+          <div class="memory-date">😂 Chapter 3 — From "Bhai" to "Hizda"!</div>
+          <div class="memory-text">
+            Then came the funniest promotion ever—from your "Bhai" straight to your "Hizda"! All our teasing, jokes, and non-stop banter brought us closer every single day.
+          </div>
+        </div>
+
+        <div class="memory-card">
+          <div class="memory-date">❤️ Chapter 4 — Becoming Yours</div>
+          <div class="memory-text">
+            Somewhere between all the laughs and teasing, friendship turned into love—and saying yes to each other changed everything.
+          </div>
+        </div>
+
+        <div class="memory-card">
+          <div class="memory-date">🎉 Chapter 5 — 2 Months Strong Today!</div>
+          <div class="memory-text">
+            Two months down, Zariya! Every nickname, every laugh, and every second with you is a memory I wouldn't trade for anything.
+          </div>
+        </div>
+
+      </div>
+      <button class="action-btn" onclick="nextPage('page3', 2)">Read My Letter 💌</button>
+    </div>
+
+    <!-- PAGE 3: LOVE LETTER -->
+    <div class="page" id="page3">
+      <h2>For My Zariya 💖</h2>
+      <div class="letter-paper">
+        <p>Dear Zariya,</p><br>
+        <p>
+          Happy 2-Month Anniversary, my love! Whenever I think about how we started—meeting in a hospital, you calling me "Bhai", then teasing me as "Hizda", and now here we are celebrating two months together—it always puts the biggest smile on my face.
+        </p><br>
+        <p>
+          Thank you for every laugh, every cute nickname, and for filling my life with so much color and happiness. No matter what you call me, I will always be right beside you, loving you more every single day.
+        </p>
+        <div class="letter-sign">Forever yours, Arish ❤️</div>
+      </div>
+      <button class="action-btn" onclick="nextPage('page4', 3)">Go to Grand Finale 🌟</button>
+    </div>
+
+    <!-- PAGE 4: GRAND FINALE ENDING -->
+    <div class="page" id="page4">
+      <h2>To Infinity & Beyond ✨</h2>
+      
+      <div class="finale-box">
+        <h3>Forever & Always, Zariya</h3>
+        <p>
+          Two months is just the very first page of our lifetime book. Thank you for choosing me, for loving me, and for being the most amazing girl in my world. 
+        </p>
+        <p style="font-weight: 700; color: #ffe259;">
+          I love you so much, Zariya Habib Sheikh! 🌹
+        </p>
+        <div class="heart-pulse">💖</div>
+      </div>
+
+      <button class="action-btn" onclick="restartSite()">Start From Beginning ↺</button>
+    </div>
+
+  </div>
+
+  <!-- DIRECT MP3 MUSIC PLAYER BAR -->
+  <div class="music-bar">
+    <button class="play-btn" id="musicBtn" onclick="toggleMusic()">▶️</button>
+    <div class="song-info" id="songLabel">Our Song 🎵 (Tap to Play)</div>
+    <!-- YAHAN APNI .MP3 FILE KA NAAM DAALEIN (Jaise: song.mp3 ya barsaat.mp3) -->
+    <audio id="bgMusic" src="YOUR_SONG_FILE.mp3" loop></audio>
+  </div>
+
+  <script>
+    // Floating colorful emojis
+    const particlesContainer = document.getElementById('bgParticles');
+    const symbols = ['❤️', '💖', '🌈', '✨', '🦋', '💕', '🌸', '💛'];
+
+    setInterval(() => {
+      const el = document.createElement('div');
+      el.classList.add('particle');
+      el.innerText = symbols[Math.floor(Math.random() * symbols.length)];
+      el.style.left = Math.random() * 100 + 'vw';
+      el.style.fontSize = (Math.random() * 18 + 15) + 'px';
+      el.style.animationDuration = (Math.random() * 5 + 5) + 's';
+      particlesContainer.appendChild(el);
+      setTimeout(() => el.remove(), 10000);
+    }, 350);
+
+    // Multi-Page Navigation
+    function showPage(pageId, btnElement) {
+      document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
+      document.querySelectorAll('.nav-btn').forEach(b => b.classList.remove('active'));
+      document.getElementById(pageId).classList.add('active');
+      btnElement.classList.add('active');
+    }
+
+    function nextPage(pageId, navIndex) {
+      const navButtons = document.querySelectorAll('.nav-btn');
+      showPage(pageId, navButtons[navIndex]);
+    }
+
+    function restartSite() {
+      const navButtons = document.querySelectorAll('.nav-btn');
+      showPage('page1', navButtons[0]);
+    }
+
+    // Direct MP3 Audio Player Control
+    const audio = document.getElementById('bgMusic');
+    const musicBtn = document.getElementById('musicBtn');
+    const songLabel = document.getElementById('songLabel');
+
+    function toggleMusic() {
+      if (audio.paused) {
+        audio.play().then(() => {
+          musicBtn.innerText = '⏸️';
+          songLabel.innerText = 'Playing Our Song 🎶';
+        }).catch(() => {
+          alert('https://youtube.com/shorts/uOTKTlXn1rA');
+        });
+      } else {
+        audio.pause();
+        musicBtn.innerText = '▶️';
+        songLabel.innerText = 'Paused 🎵';
+      }
+    }
+  </script>
+</body>
+</html>
